@@ -20,7 +20,7 @@ public inherited sharing abstract class RestCalloutBase {
 
         request.setMethod(httpMethod);
         //TODO: update named credential 
-        request.setEndpoint('callout:HKT_Ruby_API/' + this.path);
+        request.setEndpoint('callout:REST_API_Endpoint/' + this.path);
         request.setTimeout(HTTP_REQUEST_TIME_OUT);
         //set common header values
         request.setHeader('Content-Type', 'application/json');
