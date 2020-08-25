@@ -55,7 +55,7 @@ public inherited sharing abstract class RestCalloutBase {
                                                 endTime - startTime); */
             }
         } catch(Exception ex) {
-            ApplicationLogHelper.logException('Class', 'RestCalloutBase', 'send', ex);
+            //ApplicationLogHelper.logException('Class', 'RestCalloutBase', 'send', ex);
         }
         return response;
     }
