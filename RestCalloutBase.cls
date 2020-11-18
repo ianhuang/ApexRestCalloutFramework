@@ -37,23 +37,21 @@ public inherited sharing abstract class RestCalloutBase {
                 request.setBody(requestBody);   
             }
 
-            if (!Test.isRunningTest()) {
-                long startTime = DateTime.now().getTime();
-                response = new http().send(request);
-            
-                //ApplicationLogHelper.debugLog(request.toString());
-                //ApplicationLogHelper.debugLog(response.toString());
-                //ApplicationLogHelper.debugLog(response.getBody());
+	long startTime = DateTime.now().getTime();
+	response = new http().send(request);
 
-                long endTime = DateTime.now().getTime();
-                /*ApplicationLogHelper.logCallout('Class',
-                                                'RestCalloutBase', 'send', '', '', 
-                                                'callout:HKT_Ruby_API/' + this.path,
-                                                'StatusCode: ' + response.getStatusCode(),
-                                                request.getBody(),
-                                                response.getBody(), 
-                                                endTime - startTime); */
-            }
+	 //ApplicationLogHelper.debugLog(request.toString());
+	 //ApplicationLogHelper.debugLog(response.toString());
+	 //ApplicationLogHelper.debugLog(response.getBody());
+
+	 long endTime = DateTime.now().getTime();
+	 /*ApplicationLogHelper.logCallout('Class',
+					 'RestCalloutBase', 'send', '', '', 
+					 'callout:HKT_Ruby_API/' + this.path,
+					 'StatusCode: ' + response.getStatusCode(),
+	 				  request.getBody(),
+					  response.getBody(), 
+					  endTime - startTime); */
         } catch(Exception ex) {
             //ApplicationLogHelper.logException('Class', 'RestCalloutBase', 'send', ex);
         }
